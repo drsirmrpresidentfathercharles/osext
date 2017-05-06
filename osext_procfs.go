@@ -16,7 +16,7 @@ import (
 
 func executable() (string, error) {
 	switch runtime.GOOS {
-	case "linux","android":
+	case "linux", "android":
 		const deletedTag = " (deleted)"
 		execpath, err := os.Readlink("/proc/self/exe")
 		if err != nil {
